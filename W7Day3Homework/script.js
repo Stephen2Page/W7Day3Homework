@@ -33,12 +33,13 @@ function chooseAnswer() {
         "Very doubtful"
     ];
     $(".btn").fadeOut(2000, function () {
-        $(id = "#answer").delay(3000).fadeIn(1000, function () {
+        $("#answer").hide(); //makes sure previous answer is no longer displayed
+        $("#answer").delay(3000).fadeIn(1000, function () {
             document.getElementById("answer").innerHTML = answers[num];
 
-            $(id = "#answer").delay(3000).fadeOut(2000, function () {
-                document.getElementById("answer").innerHTML = "  ";
-                $(".btn").fadeIn(2000)
+            $("#answer").delay(3000).fadeOut(2000, function () {
+                document.getElementById("answer").innerHTML = "  "; //resets field
+                $(".btn").fadeIn(2000)  //restores button
             });
         });
     });

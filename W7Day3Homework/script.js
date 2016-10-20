@@ -1,8 +1,13 @@
-﻿function chooseAnswer() {
+﻿function fadeButton() {
+
+}
+
+function chooseAnswer() {
     /*get random number
     retrieve answer from array
     return answer
     */
+   
     var num = Math.floor(Math.random() * 20);
     console.log(num);
     var answers = [
@@ -27,6 +32,15 @@
         "Outlook not so good",
         "Very doubtful"
     ];
-    document.getElementById("answer").innerHTML = answers[num];
+    $(".btn").fadeOut(2000, function () {
+        $(id = "#answer").delay(3000).fadeIn(1000, function () {
+            document.getElementById("answer").innerHTML = answers[num];
 
+            $(id = "#answer").delay(3000).fadeOut(2000, function () {
+                document.getElementById("answer").innerHTML = "  ";
+                $(".btn").fadeIn(2000)
+            });
+        });
+    });
 }
+

@@ -1,16 +1,18 @@
-﻿html {
+﻿/*allows backgroud and other elements to fill window*/
+html {
     height: 100%;
 }
 body {
         min-height: 100%;
-        /*background: white; /* For browsers that do not support gradients */
-        /*background: -webkit-radial-gradient(red, yellow, green); /* Safari 5.1 to 6.0 */
+        background: white; /* For browsers that do not support gradients*/ 
         background: radial-gradient(circle, black 20%, white 30%, black 80% ); /* Standard syntax (must be last) */
 
 }
+/*Centers headings*/
 .center-justify {
     text-align: center;
 }
+/*Centers answer*/
 .center {
     color: white;
     font-size: 120%;
